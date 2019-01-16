@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Smile.Core\Smile.Core.csproj" />
+    <ProjectReference Include="..\Smile.Northwind.Entities\Smile.Northwind.Entities.csproj" />
   </ItemGroup>
 
 </Project>

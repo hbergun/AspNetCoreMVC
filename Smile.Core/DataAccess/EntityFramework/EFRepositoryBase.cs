@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Smile.Core.DataAccess.EntityFramework
 {
-    public class EFEntityRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity>
+    public class EFRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity>
         where TEntity : class, IEntity, new()
         where TContext : DbContext, new()
     {

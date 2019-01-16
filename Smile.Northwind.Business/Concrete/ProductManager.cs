@@ -14,14 +14,32 @@ namespace Smile.Northwind.Business.Concrete
         {
             this.productDAL = productDAL;
         }
+
+        public void Add(Product product)
+        {
+            productDAL.Add(product);
+        }
+
+        public void Update(Product product)
+        {
+            productDAL.Update(product);
+        }
+
+        public void Delete(Product product)
+        {
+            productDAL.Delete(product);
+        }
+
         public List<Product> GetAll()
         {
-
+            return productDAL.GetList();
         }
 
         public List<Product> GetByCategory(int categoryID)
         {
-            throw new NotImplementedException();
+            return productDAL.GetList(p => p.CategoryID == categoryID);
         }
+
+      
     }
 }
