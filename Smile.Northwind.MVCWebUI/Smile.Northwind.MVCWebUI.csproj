@@ -7,7 +7,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Smile.Core\Smile.Core.csproj" />
+    <ProjectReference Include="..\Smile.Northwind.Business\Smile.Northwind.Business.csproj" />
+    <ProjectReference Include="..\Smile.Northwind.Entities\Smile.Northwind.Entities.csproj" />
   </ItemGroup>
 
 </Project>

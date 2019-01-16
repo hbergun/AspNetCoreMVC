@@ -25,9 +25,9 @@ namespace Smile.Northwind.Business.Concrete
             productDAL.Update(product);
         }
 
-        public void Delete(Product product)
+        public void Delete(int productID)
         {
-            productDAL.Delete(product);
+            productDAL.Delete(new Product { ProductID=productID });
         }
 
         public List<Product> GetAll()

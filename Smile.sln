@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smile.Core", "Smile.Core\Smile.Core.csproj", "{32C84C65-43E8-4EF6-AA92-011A2358806B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smile.Core", "Smile.Core\Smile.Core.csproj", "{32C84C65-43E8-4EF6-AA92-011A2358806B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smile.Northwind.Entities", "Smile.Northwind.Entities\Smile.Northwind.Entities.csproj", "{2D3ED2E4-F1CE-4A05-B026-1317703B0831}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smile.Northwind.Entities", "Smile.Northwind.Entities\Smile.Northwind.Entities.csproj", "{2D3ED2E4-F1CE-4A05-B026-1317703B0831}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smile.Northwind.DataAccess", "Smile.Northwind.DataAccess\Smile.Northwind.DataAccess.csproj", "{068CE724-2867-40AE-900B-24A48B0C3D5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smile.Northwind.DataAccess", "Smile.Northwind.DataAccess\Smile.Northwind.DataAccess.csproj", "{068CE724-2867-40AE-900B-24A48B0C3D5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smile.Northwind.Business", "Smile.Northwind.Business\Smile.Northwind.Business.csproj", "{2AAC514E-1874-4C9E-BE17-EFB33CD97DDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smile.Northwind.Business", "Smile.Northwind.Business\Smile.Northwind.Business.csproj", "{2AAC514E-1874-4C9E-BE17-EFB33CD97DDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smile.Northwind.MVCWebUI", "Smile.Northwind.MVCWebUI\Smile.Northwind.MVCWebUI.csproj", "{3148F4D4-A550-4E11-A968-0D0B587AAD89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smile.Northwind.CoreMVCUI", "Smile.Northwind.CoreMVCUI\Smile.Northwind.CoreMVCUI.csproj", "{69C34315-FBD0-4451-9C23-428BEAC6BEB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{2AAC514E-1874-4C9E-BE17-EFB33CD97DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AAC514E-1874-4C9E-BE17-EFB33CD97DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AAC514E-1874-4C9E-BE17-EFB33CD97DDA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3148F4D4-A550-4E11-A968-0D0B587AAD89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3148F4D4-A550-4E11-A968-0D0B587AAD89}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3148F4D4-A550-4E11-A968-0D0B587AAD89}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3148F4D4-A550-4E11-A968-0D0B587AAD89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69C34315-FBD0-4451-9C23-428BEAC6BEB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C34315-FBD0-4451-9C23-428BEAC6BEB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C34315-FBD0-4451-9C23-428BEAC6BEB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C34315-FBD0-4451-9C23-428BEAC6BEB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
