@@ -1,16 +1,23 @@
-﻿
+﻿@model Smile.Northwind.MvcWebUI.Models.ProductViewModel
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    Hello World
-</body>
-</html>
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Product Unit Price</th>
+                <th>Product Units In Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Products)
+            {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.UnitsInStock</td>
+            </tr>
+            }
+        </tbody>
+    </table>

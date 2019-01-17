@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Smile.Northwind.MVCWebUI
+namespace Smile.Northwind.MvcWebUI
 {
     public class Program
     {

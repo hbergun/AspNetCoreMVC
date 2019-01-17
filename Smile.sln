@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smile.Northwind.DataAccess"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smile.Northwind.Business", "Smile.Northwind.Business\Smile.Northwind.Business.csproj", "{2AAC514E-1874-4C9E-BE17-EFB33CD97DDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smile.Northwind.CoreMVCUI", "Smile.Northwind.CoreMVCUI\Smile.Northwind.CoreMVCUI.csproj", "{69C34315-FBD0-4451-9C23-428BEAC6BEB0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smile.Northwind.MvcWebUI", "Smile.Northwind.MvcWebUI\Smile.Northwind.MvcWebUI.csproj", "{3AAF9D5C-1419-4B18-BAB0-9A0E25E029F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{2AAC514E-1874-4C9E-BE17-EFB33CD97DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AAC514E-1874-4C9E-BE17-EFB33CD97DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AAC514E-1874-4C9E-BE17-EFB33CD97DDA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{69C34315-FBD0-4451-9C23-428BEAC6BEB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69C34315-FBD0-4451-9C23-428BEAC6BEB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69C34315-FBD0-4451-9C23-428BEAC6BEB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69C34315-FBD0-4451-9C23-428BEAC6BEB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AAF9D5C-1419-4B18-BAB0-9A0E25E029F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AAF9D5C-1419-4B18-BAB0-9A0E25E029F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AAF9D5C-1419-4B18-BAB0-9A0E25E029F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AAF9D5C-1419-4B18-BAB0-9A0E25E029F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

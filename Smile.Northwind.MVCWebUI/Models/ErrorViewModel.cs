@@ -1,6 +1,6 @@
 using System;
 
-namespace Smile.Northwind.AspNetMvcWebUI.Models
+namespace Smile.Northwind.MvcWebUI.Models
 {
     public class ErrorViewModel
     {
