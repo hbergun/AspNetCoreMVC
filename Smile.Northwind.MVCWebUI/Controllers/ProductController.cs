@@ -16,10 +16,14 @@ namespace Smile.Northwind.MvcWebUI.Controllers
             this.productService = productService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page = 1,int category=0)
         {
-            var products = productService.GetAll();
-            ProductViewModel model = new ProductViewModel() { Products=products };
+            int pageSize = 10;
+            var products = productService.GetByCategory(category);
+            ProductViewModel model = new ProductViewModel()
+            {
+                Products = products.Skip((page - 1) * pageSize).Take(pageSize).ToList()
+            };
             return View(model);
         }
     }

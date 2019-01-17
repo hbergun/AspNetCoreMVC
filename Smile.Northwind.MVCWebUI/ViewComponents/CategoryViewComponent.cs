@@ -20,7 +20,9 @@ namespace Smile.Northwind.MvcWebUI.ViewComponents
         {
             CategoryViewModel model = new CategoryViewModel()
             {
-                Categories = categoryService.GetAll()
+                Categories = categoryService.GetAll(),
+                CurrentCategory = Convert.ToInt32(HttpContext.Request.Query["category"])
+                
             };
             return View(model);
         }

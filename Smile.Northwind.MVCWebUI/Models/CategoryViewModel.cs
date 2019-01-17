@@ -9,5 +9,6 @@ namespace Smile.Northwind.MvcWebUI.Models
     public class CategoryViewModel
     {
         public List<Category> Categories { get; internal set; }
+        public int CurrentCategory { get; internal set; }
     }
 }

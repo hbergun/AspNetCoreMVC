@@ -37,7 +37,7 @@ namespace Smile.Northwind.Business.Concrete
 
         public List<Product> GetByCategory(int categoryID)
         {
-            return productDAL.GetList(p => p.CategoryID == categoryID);
+            return productDAL.GetList(p => p.CategoryID == categoryID || categoryID== 0);
         }
 
       
