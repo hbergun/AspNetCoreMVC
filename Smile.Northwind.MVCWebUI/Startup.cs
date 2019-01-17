@@ -35,7 +35,12 @@ namespace Smile.Northwind.MvcWebUI
             //continue... if a Users needs a instance at the same time Transient behaves like Singleton
             //AddTransient if a Users needs a instance at the same time services was created two instance from IService Concrete Class 
             services.AddScoped<IProductDAL,EFProductDAL>();
-            
+            services.AddScoped<ICategoryService, CategoryManager>();
+            services.AddScoped<ICategoryDAL, EFCategoryDAL>();
+
+
+
+
 
             services.Configure<CookiePolicyOptions>(options =>
             {

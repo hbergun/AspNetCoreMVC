@@ -9,6 +9,7 @@ namespace Smile.Northwind.Business.Concrete
 {
     public class CategoryManager : ICategoryService
     {
+        //Doğrudan Diğer Katmana Erişmek Doğru Değildir.Bu Yüzden Interfaceler Üzerinden Haberleşilmelidir.
         private ICategoryDAL categoryDAL;
         public CategoryManager(ICategoryDAL categoryDAL)
         {

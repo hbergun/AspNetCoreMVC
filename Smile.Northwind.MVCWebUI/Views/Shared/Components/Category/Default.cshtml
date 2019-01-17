@@ -1,0 +1,8 @@
+﻿@model Smile.Northwind.MvcWebUI.Models.CategoryViewModel
+
+<div class="list-group">
+    @foreach (var category in Model.Categories)
+    {
+        <a href="#" class="list-group-item">@category.CategoryName</a>
+    }
+</div>
