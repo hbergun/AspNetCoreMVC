@@ -2,22 +2,29 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <table class="table table-responsive">
-        <thead>
-            <tr>
-                <th>Product Name</th>
-                <th>Product Unit Price</th>
-                <th>Product Units In Stock</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.Products)
-            {
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Unit Price</th>
+            <th>Product Units In Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Products)
+        {
             <tr>
                 <td>@item.ProductName</td>
                 <td>@item.UnitPrice</td>
                 <td>@item.UnitsInStock</td>
             </tr>
-            }
-        </tbody>
-    </table>
+        }
+    </tbody>
+</table>
+<product-list-pager 
+    current-category="@Model.CurrentCategoryID" 
+    current-page="@Model.CurrentPage" 
+    page-count="@Model.PageCount" 
+    page-size="@Model.PageSize"></product-list-pager>
+
+

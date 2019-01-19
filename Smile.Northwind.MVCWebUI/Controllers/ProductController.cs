@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Smile.Northwind.Business.Abstract;
 using Smile.Northwind.MvcWebUI.Models;
@@ -30,5 +31,14 @@ namespace Smile.Northwind.MvcWebUI.Controllers
             };
             return View(model);
         }
+
+        //public string Session()
+        //{
+        //    HttpContext.Session.SetString("city", "izmir");
+        //    HttpContext.Session.SetInt32("age", 21);
+        //
+        //    HttpContext.Session.GetString("city");
+        //    HttpContext.Session.GetInt32("age");
+        //}
     }
 }

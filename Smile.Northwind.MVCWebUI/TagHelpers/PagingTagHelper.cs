@@ -26,8 +26,8 @@ namespace Smile.Northwind.MvcWebUI.TagHelpers
             stringBuilder.Append("<ul class='pagination'>");
             for (int i = 1; i <= PageCount; i++)
             {
-                stringBuilder.AppendFormat($"<li class='{0}'>", i == CurrentCategory ? "active" : "");
-                stringBuilder.AppendFormat($"<a href='/Product/Index?=page={0}&category={1}'>{2}</a>", i, CurrentCategory, i);
+                stringBuilder.AppendFormat("<li class='page-item {0}'>", i == CurrentPage ? "active" : "");
+                stringBuilder.AppendFormat("<a class=page-link href='/Product/Index?page={0}&category={1}'>{2}</a>", i, CurrentCategory, i);
                 stringBuilder.Append("</li>");
             }
             output.Content.SetHtmlContent(stringBuilder.ToString());

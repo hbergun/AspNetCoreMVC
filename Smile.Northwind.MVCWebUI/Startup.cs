@@ -37,6 +37,8 @@ namespace Smile.Northwind.MvcWebUI
             services.AddScoped<IProductDAL,EFProductDAL>();
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<ICategoryDAL, EFCategoryDAL>();
+            services.AddSession();
+            services.AddDistributedMemoryCache(); //Or SqlServerCache
 
 
 
@@ -70,6 +72,7 @@ namespace Smile.Northwind.MvcWebUI
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {
