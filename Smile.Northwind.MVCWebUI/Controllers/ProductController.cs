@@ -22,7 +22,11 @@ namespace Smile.Northwind.MvcWebUI.Controllers
             var products = productService.GetByCategory(category);
             ProductViewModel model = new ProductViewModel()
             {
-                Products = products.Skip((page - 1) * pageSize).Take(pageSize).ToList()
+                Products = products.Skip((page - 1) * pageSize).Take(pageSize).ToList(),
+                PageCount = (int)Math.Ceiling(products.Count / (double)pageSize),
+                PageSize = pageSize,
+                CurrentCategoryID = category,
+                CurrentPage=page,
             };
             return View(model);
         }
