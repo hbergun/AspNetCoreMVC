@@ -14,6 +14,7 @@ using Smile.Northwind.Business.Concrete;
 using Smile.Northwind.DataAccess.Abstract;
 using Smile.Northwind.DataAccess.Concrete.EntityFramework;
 using Smile.Northwind.MvcWebUI.Middlewares;
+using Smile.Northwind.MvcWebUI.Services;
 
 namespace Smile.Northwind.MvcWebUI
 {
@@ -37,6 +38,9 @@ namespace Smile.Northwind.MvcWebUI
             services.AddScoped<IProductDAL,EFProductDAL>();
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<ICategoryDAL, EFCategoryDAL>();
+            services.AddSingleton<ICartSessionService, CartSessionManager>();
+            services.AddSingleton<ICartService, CartManager>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSession();
             services.AddDistributedMemoryCache(); //Or SqlServerCache
 

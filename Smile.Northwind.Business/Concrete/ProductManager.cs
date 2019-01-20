@@ -40,6 +40,9 @@ namespace Smile.Northwind.Business.Concrete
             return productDAL.GetList(p => p.CategoryID == categoryID || categoryID== 0);
         }
 
-      
+        public Product GetByID(int ProductID)
+        {
+            return productDAL.Get(p => p.ProductID == ProductID);
+        }
     }
 }

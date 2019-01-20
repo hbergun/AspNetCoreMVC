@@ -32,6 +32,8 @@ namespace Smile.Northwind.MvcWebUI.Controllers
             return View(model);
         }
 
+      
+
         //public string Session()
         //{
         //    HttpContext.Session.SetString("city", "izmir");

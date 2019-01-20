@@ -8,6 +8,7 @@
             <th>Product Name</th>
             <th>Product Unit Price</th>
             <th>Product Units In Stock</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -17,6 +18,7 @@
                 <td>@item.ProductName</td>
                 <td>@item.UnitPrice</td>
                 <td>@item.UnitsInStock</td>
+                <td><a class="btn btn-xs btn-outline-info" asp-controller="Cart" asp-action="AddToCart" asp-route-ProductID="@item.ProductID">Add To Cart</a></td>
             </tr>
         }
     </tbody>

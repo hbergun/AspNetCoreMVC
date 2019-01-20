@@ -12,6 +12,7 @@ namespace Smile.Northwind.Business.Abstract
         void Add(Product product);
         void Update(Product product);
         void Delete(int productID);
+        Product GetByID(int ProductID);
 
     }
 }
