@@ -17,7 +17,7 @@ namespace Smile.Northwind.Entities.Concrete
         [Required]
         public string City { get; set; }
         [Required]
-        public string Adress { get; set; }
+        public string Address { get; set; }
         [Required]
         [Range(15,100)]
         public int Age { get; set; }

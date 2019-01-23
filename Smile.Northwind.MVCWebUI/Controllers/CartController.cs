@@ -50,7 +50,7 @@ namespace Smile.Northwind.MvcWebUI.Controllers
             TempData.Add("message", "Your product was succesfully removed to the cart!");
             return RedirectToAction("List");
         }
-        
+        [HttpGet]
         public IActionResult Complete()
         {
             var model = new ShippingDetailsViewModel()
@@ -58,6 +58,16 @@ namespace Smile.Northwind.MvcWebUI.Controllers
                 ShippingDetails = new ShippingDetails()
             };
             return View(model);
+        }
+        [HttpPost]
+        public IActionResult Complete(ShippingDetails shippingDetails)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            TempData.Add("message", String.Format("Thank you {0},you order is in processing", shippingDetails.FirstName));
+            return View();
         }
     }
 }
