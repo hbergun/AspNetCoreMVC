@@ -1,0 +1,19 @@
+﻿@model Smile.Northwind.MvcWebUI.Models.CartSummaryViewModel
+
+<ul class="dropdown-menu">
+    @foreach (var product in Model.Cart.CartLines)
+    {
+        <li>
+            <a>@product.Product.ProductName <span class="badge">@product.ProductQuantity</span></a>
+        </li>
+    }
+    <li role="separator" class="dropdown-divider"></li>
+    <li>
+        <a><i class="blue shopping cart icon"></i>@Model.Cart.Total</a>
+      
+    </li>
+    <li role="separator" class="dropdown-divider"></li>
+    <li>
+        <a asp-controller="Cart" asp-action="List">Go To Cart Details</a>
+    </li>
+</ul>

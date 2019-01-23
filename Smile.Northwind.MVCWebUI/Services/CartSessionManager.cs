@@ -29,7 +29,7 @@ namespace Smile.Northwind.MvcWebUI.Services
 
         public void SetCart(Cart cart)  
         {
-            httpContextAccessor.HttpContext.Session.SetObject("cart",new Cart());
+            httpContextAccessor.HttpContext.Session.SetObject("cart",cart);
 
         }
     }
