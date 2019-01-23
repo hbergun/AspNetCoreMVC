@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Smile.Northwind.Business.Abstract;
+using Smile.Northwind.Entities.Concrete;
+using Smile.Northwind.MvcWebUI.Models;
 using Smile.Northwind.MvcWebUI.Services;
 
 namespace Smile.Northwind.MvcWebUI.Controllers
@@ -13,7 +15,7 @@ namespace Smile.Northwind.MvcWebUI.Controllers
         private ICartSessionService _cartSessionService;
         private ICartService _cartService;
         private IProductService _productService;
-        public CartController(ICartSessionService cartSessionService,ICartService cartService,IProductService productService)
+        public CartController(ICartSessionService cartSessionService, ICartService cartService, IProductService productService)
         {
             _cartSessionService = cartSessionService;
             _cartService = cartService;
@@ -30,5 +32,32 @@ namespace Smile.Northwind.MvcWebUI.Controllers
             return RedirectToAction("Index", "Product");
         }
 
+        public IActionResult List()
+        {
+            var cart = _cartSessionService.GetCart();
+            CartSummaryViewModel model = new CartSummaryViewModel()
+            {
+                Cart = cart
+            };
+            return View(model);
+        }
+
+        public IActionResult Remove(int ProductID)
+        {
+            var cart = _cartSessionService.GetCart();
+            _cartService.RemoveFromCart(cart, ProductID);
+            _cartSessionService.SetCart(cart);
+            TempData.Add("message", "Your product was succesfully removed to the cart!");
+            return RedirectToAction("List");
+        }
+        
+        public IActionResult Complete()
+        {
+            var model = new ShippingDetailsViewModel()
+            {
+                ShippingDetails = new ShippingDetails()
+            };
+            return View(model);
+        }
     }
 }
