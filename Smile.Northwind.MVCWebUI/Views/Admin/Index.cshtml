@@ -1,0 +1,31 @@
+﻿@model Smile.Northwind.MvcWebUI.Models.ProductViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Product List</h2>
+<a class="btn btn-xs btn-outline-success" asp-controller="Admin" asp-action="Insert">Add a new product</a><br /><br />
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Unit Price</th>
+            <th>Product Units In Stock</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Products)
+        {
+        <tr>
+            <td>@item.ProductName</td>
+            <td>@item.UnitPrice</td>
+            <td>@item.UnitsInStock</td>
+            <td><a class="btn btn-xs btn-outline-info" asp-controller="Admin" asp-action="Update" asp-route-ProductID="@item.ProductID">Update</a></td>
+            <td><a class="btn btn-xs btn-outline-danger" asp-controller="Admin" asp-action="Delete" asp-route-ProductID="@item.ProductID">Delete</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
