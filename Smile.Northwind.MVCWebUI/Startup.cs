@@ -6,13 +6,16 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Smile.Northwind.Business.Abstract;
 using Smile.Northwind.Business.Concrete;
 using Smile.Northwind.DataAccess.Abstract;
 using Smile.Northwind.DataAccess.Concrete.EntityFramework;
+using Smile.Northwind.MvcWebUI.Entities;
 using Smile.Northwind.MvcWebUI.Middlewares;
 using Smile.Northwind.MvcWebUI.Services;
 
@@ -41,6 +44,10 @@ namespace Smile.Northwind.MvcWebUI
             services.AddSingleton<ICartSessionService, CartSessionManager>();
             services.AddSingleton<ICartService, CartManager>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddDbContext<CustomIdentityDbContext>(options => options.UseSqlServer("Data Source=DELL-PC;Database=Northwind;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
+            services.AddIdentity<CustomIdentityUser,CustomIdentityUser>()
+                .AddEntityFrameworkStores<CustomIdentityDbContext>()
+                .AddDefaultTokenProviders(); //
             services.AddSession();
             services.AddDistributedMemoryCache(); //Or SqlServerCache
 
@@ -77,7 +84,7 @@ namespace Smile.Northwind.MvcWebUI
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseSession();
-
+            app.UseAuthentication(); //Instead OF 
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
