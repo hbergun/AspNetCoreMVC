@@ -44,10 +44,11 @@ namespace Smile.Northwind.MvcWebUI
             services.AddSingleton<ICartSessionService, CartSessionManager>();
             services.AddSingleton<ICartService, CartManager>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddDbContext<CustomIdentityDbContext>(options => options.UseSqlServer("Data Source=DELL-PC;Database=Northwind;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
-            services.AddIdentity<CustomIdentityUser,CustomIdentityUser>()
+            services.AddDbContext<CustomIdentityDbContext>
+               (options => options.UseSqlServer("Data Source=DELL-PC;Database=Northwind;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
+            services.AddIdentity<CustomIdentityUser, CustomIdentityRole>()
                 .AddEntityFrameworkStores<CustomIdentityDbContext>()
-                .AddDefaultTokenProviders(); //
+                .AddDefaultTokenProviders();
             services.AddSession();
             services.AddDistributedMemoryCache(); //Or SqlServerCache
 
@@ -85,6 +86,7 @@ namespace Smile.Northwind.MvcWebUI
             app.UseCookiePolicy();
             app.UseSession();
             app.UseAuthentication(); //Instead OF 
+            //app.UseIdentity(); OLD VERSION
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
