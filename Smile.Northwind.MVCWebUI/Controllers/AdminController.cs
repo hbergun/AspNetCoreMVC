@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Smile.Northwind.Business.Abstract;
 using Smile.Northwind.Entities.Concrete;
@@ -9,6 +10,7 @@ using Smile.Northwind.MvcWebUI.Models;
 
 namespace Smile.Northwind.MvcWebUI.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private IProductService _productService;
