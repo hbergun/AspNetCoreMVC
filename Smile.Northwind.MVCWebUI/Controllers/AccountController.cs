@@ -78,7 +78,7 @@ namespace Smile.Northwind.MvcWebUI.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(LoginViewModel loginViewModel)
+        public IActionResult Login(LoginViewModel loginViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +98,7 @@ namespace Smile.Northwind.MvcWebUI.Controllers
 
         //[HttpPost]
         //[ValidateAntiForgeryToken]
-        public ActionResult LogOff()
+        public IActionResult LogOff()
         {
             _signInManager.SignOutAsync().Wait();
             return RedirectToAction("Login");

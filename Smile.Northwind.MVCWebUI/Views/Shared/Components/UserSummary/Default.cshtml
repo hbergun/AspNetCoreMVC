@@ -1,0 +1,9 @@
+﻿@model Smile.Northwind.MvcWebUI.Models.UserSummaryViewModel
+
+<ul class="dropdown-menu">
+        @if (!String.IsNullOrEmpty(Model.UserName))
+        {
+        <li><a>Welcome @Model.UserName</a></li>
+        <li><a class="btn btn-outline-primary" asp-controller="Account" asp-action="LogOff">Logout</a></li>
+        }
+</ul>
